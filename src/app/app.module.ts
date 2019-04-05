@@ -16,7 +16,8 @@ import { from } from 'rxjs';
 import { ROUTES } from './app.routes';
 import { SpotifyService } from './services/spotify.service';
 import { NoimagePipe } from './pipes/noimage.pipe';
-import { TarjetasComponent } from './components/tarjetas/tarjetas.component';//servicios
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
+import { LoadingComponent } from './components/shared/loading/loading.component';//servicios
 
 
 
@@ -28,7 +29,8 @@ import { TarjetasComponent } from './components/tarjetas/tarjetas.component';//s
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
-    TarjetasComponent
+    TarjetasComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

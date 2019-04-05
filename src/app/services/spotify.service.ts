@@ -18,7 +18,7 @@ export class SpotifyService {
     const url = `https://api.spotify.com/v1/${query}`;
 
     const headers = new HttpHeaders({
-      'Authorization': 'Bearer BQAfIqaIP8e8QD134FpYGdQLfNpm0LhicKwvn4m08ki_czl-bAIi29uVplImxcoqXtcC0Vzl4vyLXJbK0wk'
+      'Authorization': 'Bearer BQBn81KwNVS4V-GoMW8tocyExkKVREmHywG4uSxRi_assbq-9tqw330D3rcn6cpzdkWDNbOlqU4UyWEYdKM'
     });
 
     return this.http.get(url,{headers});
@@ -32,7 +32,11 @@ export class SpotifyService {
     // });  
   }
 
-  getArtist(termino: string){
+  getArtistas(termino: string){
     return this.getQuery(`search?q=${termino}&type=artist&limit=15`).pipe(map(data => data['artists'].items));
+  }
+
+  getArtista(id: string){
+    return this.getQuery(`artists/${id}`);
   }
 }
